@@ -1,0 +1,28 @@
+body{
+    box-sizing: border-box;
+    font-family: 'Yrsa', serif;
+    display: flex;
+}
+
+#main-doc{
+    order: 2;
+    padding: 2vh 2vw;
+}
+.main-section{
+    border: 1px black solid;
+}
+
+#navbar{
+    order: 1;
+   background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 2vw;
+    min-height: 100vh;
+}
+
+.hide {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+ }

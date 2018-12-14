@@ -1,26 +1,70 @@
 
+
 const getSection = function (sectionID) {
 
-    const mainContentContainer = document.getElementById("main-content-container");
+    const mainDoc = document.getElementById("main-doc");
 
-    return [...mainContentContainer.children].find(section => section.id === sectionID);
+    return [...mainDoc.children].find(section => section.id === sectionID);
 }
 
+/*
 const applyToAll = function (CSSKey, CSSValue, optionalSection, opKey, opValue) {
 
-    console.log(optionalSection);
+    //console.log(optionalSection);
     const mainContentContainer = document.getElementById("main-content-container");
 
     [...mainContentContainer.children].forEach(section => {
 
-        // if(arguments[2] != null){
         if (section === optionalSection) {
-            section.style.setProperty(opKey, opValue);
+            // section.style.setProperty(opKey, opValue);
+            section.classList.remove("hide");
         } else {
-            section.style.setProperty(CSSKey, CSSValue);
+            // section.style.setProperty(CSSKey, CSSValue);
+            section.classList.add("hide");
         }
-        // }
     });
 }
-const testSection = getSection("intro-text");
-applyToAll("background-color", "red", testSection, "background-color", "green");
+*/
+//first, hide all sections except for the intro text
+
+const mainDoc = document.getElementById("main-doc");
+
+const sectionDisplayContainer = document.getElementById("main-content-container");
+
+[...mainDoc.children].forEach(section => {
+    if (section != sectionDisplayContainer) {
+        section.classList.add("hide");
+    }
+});
+
+//sectionDisplayContainer.appendChild(getSection("intro-text"));
+
+const displaySection = function (section) {
+    //console.log(section);
+    const displayContainer = document.getElementById("main-content-container");
+
+    if (displayContainer.hasChildNodes) {
+        [...displayContainer.children].forEach(child => {
+            displayContainer.removeChild(child);
+        });
+    }
+
+    const duplicatedSection = section.cloneNode(true);
+    duplicatedSection.classList.remove("hide");
+
+    displayContainer.appendChild(duplicatedSection);
+};
+
+displaySection(getSection("intro-text"));
+
+[...document.getElementsByClassName("nav-link")].forEach(link => {
+    link.addEventListener("click", (event) => {
+
+        const sectionID = event.target.hash.match(/[^\#]/g).join('');
+        // console.log(sectionID);
+
+        displaySection(getSection(sectionID));
+    });
+});
+
+

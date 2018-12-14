@@ -19,10 +19,12 @@ body{
     flex-direction: column;
     padding: 2vh 2vw;
     min-height: 100vh;
+    min-width: 10vw;
 }
 
 .hide {
-    position: absolute !important;
+    /* position: absolute !important;
     top: -9999px !important;
-    left: -9999px !important;
+    left: -9999px !important; */
+    display: none;
  }

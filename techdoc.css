@@ -6,10 +6,17 @@ body{
 
 #main-doc{
     order: 2;
-    padding: 2vh 2vw;
+    padding: 5vh 5vw;
+    width: 100%;
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 .main-section{
-    border: 1px black solid;
+    border: 1px black dotted;
+    /* transition: visibility 1s ease; */
+    
 }
 
 #navbar{
@@ -19,7 +26,16 @@ body{
     flex-direction: column;
     padding: 2vh 2vw;
     min-height: 100vh;
-    min-width: 10vw;
+    min-width: 12vw;
+    font-size: 1.4em;
+    white-space: nowrap;
+
+
+}
+
+.nav-link{
+
+margin-top: 1.8vh;
 }
 
 .hide {

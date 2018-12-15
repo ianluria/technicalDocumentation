@@ -17,8 +17,28 @@
             which are high-level, list-like objects.</p>
         <section class="main-section" id="array_map">
             <header> map() Method </header>
-            <p>The map() method creates a new array with the results of calling a provided function on every element in
-                the calling array.</p>
+            <p class="mdn-reference">"The <code>map()</code> method creates a new array with the results of calling a
+                provided
+                function on every element in
+                the calling array."</p>
+            <p><code>map()</code> creates a new array after running a function on each element of the original array.</p>
+            <code>newArray = oldArray.map(element=>{<br>
+                <br>
+                //code that transforms element<br>
+                <br>
+                return element;<br>
+                });
+            </code>
+            <p><code>priceOnlyArray</code> is an array of raw prices. Using the <code>map()</code> method it calculates
+                a new price by adding on the proper tax. It returns each new price to <code>arrayWithTaxes</code>. </p>
+            <code>arrayWithTaxes = priceOnlyArray.map(price=>{<br>
+                <br>
+                const taxPercent = 0.0425<br>
+                <br>
+                return price + (price * taxPercent);<br>
+                });
+            </code>
+
         </section>
         <section class="main-section" id="array_reduce">
             <header>reduce() Method</header>

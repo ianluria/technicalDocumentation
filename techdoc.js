@@ -51,6 +51,7 @@ const displaySection = function (section) {
 
     const duplicatedSection = section.cloneNode(true);
     duplicatedSection.classList.remove("hide");
+    duplicatedSection.id = "duplicate";
 
     displayContainer.appendChild(duplicatedSection);
 };

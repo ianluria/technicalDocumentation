@@ -1,9 +1,23 @@
+html{
+font-size: 1em;
+}
+
 body{
     box-sizing: border-box;
     font-family: 'Yrsa', serif;
     display: flex;
 }
 
+code {
+    font-size: 1.0rem;
+}
+
+.codeBlock{
+    /* background: #f2f2f2; */
+    max-width: 30vw;
+    margin: 0vh 0vw 0vh 2vw;
+    padding: 1vh 1vw;
+}
 #main-doc{
     order: 2;
     padding: 5vh 5vw;
@@ -12,11 +26,14 @@ body{
     flex-direction: column; */
     /* justify-content: center; */
     /* align-items: center; */
+    font-size: 1.1rem;
 }
-.main-section{
-    border: 1px black dotted;
-    /* transition: visibility 1s ease; */
-    
+/* #main-content-container{
+    font-size: 1.1em;
+} */
+
+.main-section > header {
+    font-size: 1.4rem;
 }
 
 #navbar{
@@ -27,10 +44,8 @@ body{
     padding: 2vh 2vw;
     min-height: 100vh;
     min-width: 12vw;
-    font-size: 1.4em;
+    font-size: 1.4rem;
     white-space: nowrap;
-
-
 }
 
 .nav-link{

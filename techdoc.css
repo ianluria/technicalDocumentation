@@ -8,33 +8,41 @@ body{
     display: flex;
 }
 
-code {
+/* code {
     font-size: 1.0rem;
-}
+} */
 
 .codeBlock{
-    /* background: #f2f2f2; */
-    max-width: 30vw;
-    margin: 0vh 0vw 0vh 2vw;
-    padding: 1vh 1vw;
+    background: #f4f4f4;
+    margin: 0vh 0vw 0vh 2.5vw;
+    /* padding: 1vh 1vw; */ 
 }
+
+.codeBlock *{
+font-size: 0.8rem;
+}
+
 #main-doc{
     order: 2;
     padding: 5vh 5vw;
     width: 100%;
-    /* display: flex;
-    flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
     font-size: 1.1rem;
 }
-/* #main-content-container{
-    font-size: 1.1em;
-} */
 
 .main-section > header {
     font-size: 1.4rem;
+    margin-bottom: 5vh;
 }
+
+.mdn-reference{
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+/* .mdn-reference>code{
+font-size: 1em;
+} */
 
 #navbar{
     order: 1;

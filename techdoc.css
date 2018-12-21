@@ -13,13 +13,13 @@ body{
 } */
 
 .codeBlock{
-    background: #f4f4f4;
+    /* background: #f4f4f4; */
     margin: 0vh 0vw 0vh 2.5vw;
     /* padding: 1vh 1vw; */ 
 }
 
-.codeBlock *{
-font-size: 0.8rem;
+.codeBlock code{
+font-size: 0.85rem;
 }
 
 #main-doc{
@@ -44,6 +44,12 @@ font-size: 0.8rem;
 font-size: 1em;
 } */
 
+.subsectionTitle{
+        background: #f4f4f4;
+        display: inline;
+        padding: 0.5vh 0.5vw;
+}
+
 #navbar{
     order: 1;
    background-color: aquamarine;
@@ -57,7 +63,6 @@ font-size: 1em;
 }
 
 .nav-link{
-
 margin-top: 1.8vh;
 }
 

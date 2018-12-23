@@ -50,6 +50,10 @@ font-size: 1em;
         padding: 0.5vh 0.5vw;
 }
 
+.myComments{
+    padding: 0vh 0vw 0vh 1.25vw;
+}
+
 #navbar{
     order: 1;
    background-color: aquamarine;

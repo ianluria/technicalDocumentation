@@ -66,7 +66,8 @@
                 each member of the array resulting
                 in a single output value."<a href="#reduceInfoSource"><sup>1</sup></a></p>
 
-            <p><code>reduce()</code> takes an initial value, and the first element of the array, preforms an operation
+            <p class="myComments"><code>reduce()</code> takes an initial value, and the first element of the array,
+                preforms an operation
                 between the two, and returns the result as an accumulator value. Each element of the array is used to
                 adjust the accumulator according to your code. Once every element has had its chance, the final
                 accumulator value is returned to be used as a single value.</p>
@@ -89,33 +90,167 @@
                 </code></pre>
 
             <p class="subsectionTitle">Code Example</p>
-            <p class="myComments"><code>mileageArray</code> is an array of miles driven in a day. <code>reduce()</code>
-                will be run on each day in <code>mileageArray</code> multiply it by the average cost per mile, and then
+            <p class="myComments"><code>januaryMileage</code> is an array of miles driven in a day. <code>reduce()</code>
+                will be run on each day in <code>januaryMileage</code>, multiply it by the average cost per mile, and
+                then
                 add it to the accumulator. <code>costOfDrivingJanuary</code> will equal the total miles in the array
                 multipled by cost per mile.</p>
-                <pre class="codeBlock"><code class="prettyprint">
-    const mileageArray = [102, 55,]
+            <pre class="codeBlock"><code class="prettyprint">
+    const januaryMileage = [102, 55, 86, 275, 10, 92];
+
+    const reducer = function(accumulator, milesInADay){
+
+        const costPerMile = 0.55;
+
+        return accumulator + (milesInADay*costPerMile);
+    };
+
+    const costOfDrivingJanuary = januaryMileage.reduce(reducer, 0);
+
+    //costOfDrivingJanuary = 341;
 </code></pre>
 
-            <p id="reduceInfoSource"><sup>1</sup> For more detailed information, visit the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Mozilla
+            <p id="reduceInfoSource"><sup>1</sup> For more detailed information, visit the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">Mozilla
                     Developer Network's entry on <code>reduce()</code></a>.</p>
         </section>
 
-
         <section class="main-section" id="array_slice">
             <header>slice() Method</header>
-            <p>The slice() method returns a shallow copy of a portion of an array into a new array object selected from
-                begin to end (end not included). The original array will not be modified.</p>
+
+            <p class="subsectionTitle">Definition</p>
+
+            <p class="mdn-reference">"The slice() method returns a shallow copy of a portion of an array into a new
+                array object selected from
+                begin to end (end not included). The original array will not be modified."<a href="#sliceInfoSource"><sup>1</sup></a></p>
+
+            <p class="myComments">
+                <code>slice()</code> creates a new array from an exact portion of an old array. It takes two
+                parameters, the first is index to begin extraction, and the second is to end extraction. If the second
+                index is left out, it will give everything to the end. Remember that arrays begin at the zero index.
+            </p>
+            <ul>
+                <li>A negative index number counts backwards from the end of array.</li>
+                <ul>
+                    <li><code>slice(-3)</code> extracts the last three elements</li>
+                </ul>
+                <li>The end index is not included in the new returned array</li>
+                <ul>
+                    <li><code>slice(0, 2)</code> will return the first (0) and second (1) elements, and <i>not</i> the
+                        third (2).</li>
+                </ul>
+                <li>If no indexes are passed in at all, a complete copy of the old array is returned as a new array.</li>
+            </ul>
+
+            <pre class="codeBlock"><code class="prettyprint">
+    newArray = oldArray.slice(begin, end);
+                </code></pre>
+
+            <p class="subsectionTitle">Code Example</p>
+
+            <p class="myComments"><code>studentsArray</code> is an array of objects. Each object has a student's first
+                name, and his/her birthday.
+                The teacher wants to know only the first three students' information.</p>
+
+            <pre class="codeBlock"><code class="prettyprint">
+   const studentsArray = [
+        {name: "Dan", birthday: "01/02/12"},
+        {name: "Sarah", birthday: "03/12/12"},
+        {name: "Rich", birthday: "08/22/12"},
+        {name: "Miguel", birthday: "10/10/12"},
+        {name: "Michael", birthday: "09/23/12"},
+        {name: "Clarissa", birthday: "12/24/12"}
+    ];
+
+    const firstThree = studentsArray.slice(0,3);
+
+    /*
+        [{name: "Dan", birthday: "01/02/12"},
+        {name: "Sarah", birthday: "03/12/12"},
+        {name: "Rich", birthday: "08/22/12"}]
+    */    
+                </code></pre>
+
+            <p id="sliceInfoSource"><sup>1</sup> For more detailed information, visit the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">Mozilla
+                    Developer Network's entry on <code>slice()</code></a>.</p>
         </section>
+
+
         <section class="main-section" id="array_splice">
             <header>splice() Method</header>
-            <p>The splice() method changes the contents of an array by removing or replacing existing elements and/or
-                adding new elements.</p>
+            <p class="subsectionTitle">Definition</p>
+
+            <p class="mdn-reference">"The splice() method changes the contents of an array by removing or replacing
+                existing elements and/or
+                adding new elements."<a href="#spliceInfoSource"><sup>1</sup></a></p>
+
+            <p class="myComments"><code>splice()</code> takes parameters that acutally change the array it is called
+                upon. Useful for adding and removing elements from within an existing array. </p>
+            <ul>
+                <li>First parameter: <b><code>start</code></b></li>
+                <ul>
+                    <li>Index at which splice will begin.</li>
+                    <li>If <code>start</code> is negative, splice will happen that many indices from the end.</li>
+                </ul>
+                <li>Second parameter: <code>deleteCount</code></li>
+                <ul>
+                    <li>Optional; you don't have to delete anything to use <code>splice()</code></li>
+                    <li>Number of elements to remove from the array, beginning at <code>start</code></li>
+                </ul>
+                <li>Third parameter: <code>item</code></li>
+                <ul>
+                    <li>Element to be inserted into array.</li>
+                    <li>Optional; nothing has to be added to the array to use <code>splice()</code></li>
+                </ul>
+            </ul>
+            <p class="myComments"> You can call <code>splice()</code> to only add elements, only delete elements, or
+                delete then replace the index with
+                an <code>item</code>. <code>splice()</code> returns any elements that were deleted.</p>
+
+
+            <pre class="codeBlock"><code class="prettyprint">
+    array.splice(start, deleteCount, item1, item2, item3);
+
+    //deleteCount and any item(s) are optional 
+    //deleted elements are returned
+                    </code></pre>
+
+            <p class="subsectionTitle">Code Example</p>
+
+            <p class="myComments">A greenhouse keeps track of plant heights to determine when harvesting is necessary.
+                The robot that scans the heights, missed two heights near the beginning. We'll use <code>splice()</code>
+                to manually add the missing heights back into the <code>plantHeights</code> array.</p>
+
+            <pre class="codeBlock"><code class="prettyprint">
+                const plantHeights = [10.1, 10, 10.4, 10.1, 10.2, 10.8, 10.9, 10.3];
+
+                //add two new heights after the second element
+
+                plantHeights.splice(2, 0, 10.1, 10.4);
+
+                //[10.1, 10, 10.1, 10.4, 10.4, 10.1, 10.2, 10.8, 10.9, 10.3]
+                    </code></pre>
+
+            <p id="spliceInfoSource"><sup>1</sup> For more detailed information, visit the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">Mozilla
+                    Developer Network's entry on <code>splice()</code></a>.</p>
         </section>
+
+
         <section class="main-section" id="array_filter">
             <header>filter() Method</header>
-            <p>The filter() method creates a new array with all elements that pass the test implemented by the provided
-                function.</p>
+            <p class="mdn-reference">"The filter() method creates a new array with all elements that pass the test
+                implemented by the provided
+                function."<a href="#filterInfoSource"><sup>1</sup></a></p>
+
+            <p class="subsectionTitle">Definition</p>
+            <pre class="codeBlock"><code class="prettyprint">
+                </code></pre>
+            <p class="subsectionTitle">Code Example</p>
+            <pre class="codeBlock"><code class="prettyprint">
+                </code></pre>
+
+
+            <p id="filterInfoSource"><sup>1</sup> For more detailed information, visit the <a href="">Mozilla
+                    Developer Network's entry on <code>filter()</code></a>.</p>
         </section>
     </main>
 

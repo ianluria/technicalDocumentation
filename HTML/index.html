@@ -191,12 +191,12 @@
                     <li>Index at which splice will begin.</li>
                     <li>If <code>start</code> is negative, splice will happen that many indices from the end.</li>
                 </ul>
-                <li>Second parameter: <code>deleteCount</code></li>
+                <li>Second parameter: <b><code>deleteCount</code></b></li>
                 <ul>
                     <li>Optional; you don't have to delete anything to use <code>splice()</code></li>
                     <li>Number of elements to remove from the array, beginning at <code>start</code></li>
                 </ul>
-                <li>Third parameter: <code>item</code></li>
+                <li>Third parameter: <b><code>item</code></b></li>
                 <ul>
                     <li>Element to be inserted into array.</li>
                     <li>Optional; nothing has to be added to the array to use <code>splice()</code></li>
@@ -208,7 +208,7 @@
 
 
             <pre class="codeBlock"><code class="prettyprint">
-    array.splice(start, deleteCount, item1, item2, item3);
+    array.splice(<b>start, deleteCount, item1, item2, item3</b>);
 
     //deleteCount and any item(s) are optional 
     //deleted elements are returned

@@ -221,13 +221,13 @@
                 to manually add the missing heights back into the <code>plantHeights</code> array.</p>
 
             <pre class="codeBlock"><code class="prettyprint">
-                const plantHeights = [10.1, 10, 10.4, 10.1, 10.2, 10.8, 10.9, 10.3];
+    const plantHeights = [10.1, 10, 10.4, 10.1, 10.2, 10.8, 10.9, 10.3];
 
-                //add two new heights after the second element
+        //add two new heights after the second element
 
-                plantHeights.splice(2, 0, 10.1, 10.4);
+        plantHeights.splice(2, 0, 10.1, 10.4);
 
-                //[10.1, 10, 10.1, 10.4, 10.4, 10.1, 10.2, 10.8, 10.9, 10.3]
+        //[10.1, 10, 10.1, 10.4, 10.4, 10.1, 10.2, 10.8, 10.9, 10.3]
                     </code></pre>
 
             <p id="spliceInfoSource"><sup>1</sup> For more detailed information, visit the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">Mozilla
@@ -237,25 +237,53 @@
 
         <section class="main-section" id="array_filter">
             <header>filter() Method</header>
+            <p class="subsectionTitle">Definition</p>
             <p class="mdn-reference">"The filter() method creates a new array with all elements that pass the test
                 implemented by the provided
                 function."<a href="#filterInfoSource"><sup>1</sup></a></p>
-
-            <p class="subsectionTitle">Definition</p>
+            <p class="myComments"><code>filter()</code> creates a new array by running a function once for each element
+                in the old array. The function must return <code>true</code> or<code>false</code>. If the function
+                returns <code>true</code> on an element, it will be included in the new array. </p>
             <pre class="codeBlock"><code class="prettyprint">
+    const newArray = oldArray.filter(element=>{
+
+        //if element passes test
+            //return true
+
+        //if element cannot pass test
+            //return false
+    });
                 </code></pre>
             <p class="subsectionTitle">Code Example</p>
+            <p class="myComments">A convenience store wants to find out what percent of its total sales for the day
+                were greater than $20.00. By using <code>filter()</code>, the sales amounts listed in an array can be
+                tested if they are greater than or equal to $20. <code>largeSales</code> is a new array created from
+                the <code>sales123118</code> array after running <code>filter()</code>. </p>
             <pre class="codeBlock"><code class="prettyprint">
+        const sales123118 = [1.25, 1.00, 5.04, 3.20, 58.67,
+                             8.90, 6.75, 20.15, 18.24, 11.24,
+                             1.45, 3.76, 31.56, 10.00, 20.00, 2.54];
+
+        const largeSales = sales123118.filter(sale=>{
+
+            if (sale >= 20){
+                return true;
+            } else {
+                return false;
+            }
+        });
+
+        //largeSales = [58.67, 20.15, 31.56, 20]
                 </code></pre>
 
 
-            <p id="filterInfoSource"><sup>1</sup> For more detailed information, visit the <a href="">Mozilla
+            <p id="filterInfoSource"><sup>1</sup> For more detailed information, visit the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Mozilla
                     Developer Network's entry on <code>filter()</code></a>.</p>
         </section>
     </main>
 
     <nav id="navbar">
-        <header>Navbar Header</header>
+        <header>Array methods</header>
         <a href="#array_map" class="nav-link">map() Method</a>
         <a href="#array_reduce" class="nav-link">reduce() Method</a>
         <a href="#array_slice" class="nav-link">slice() Method</a>

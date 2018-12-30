@@ -8,14 +8,8 @@ body{
     display: flex;
 }
 
-/* code {
-    font-size: 1.0rem;
-} */
-
 .codeBlock{
-    /* background: #f4f4f4; */
     margin: 0vh 0vw 0vh 2.5vw;
-    /* padding: 1vh 1vw; */ 
 }
 
 .codeBlock code{
@@ -45,13 +39,24 @@ font-size: 1em;
 } */
 
 .subsectionTitle{
-        background: #f4f4f4;
-        display: inline;
-        padding: 0.5vh 0.5vw;
+        font-size: 1.10rem;
+}
+
+.greyBackground{
+    background: #f4f4f4;
+    padding: 0.5vh 0.5vw;
+
 }
 
 .myComments{
     padding: 0vh 0vw 0vh 1.25vw;
+}
+
+.main-section>footer{
+    margin: 10vh 0vw 0vh 0vw;
+    padding: 1vh 0vw;
+    border-top: 1px black solid;
+    font-size: 0.9rem;
 }
 
 #navbar{

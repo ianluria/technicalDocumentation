@@ -55,7 +55,8 @@ const arrayWithTaxes = priceOnlyArray.map(price=>{
     //tax is 4.25%   
     const taxPercent = 0.0425;
     const priceWithTax = price + (price * taxPercent); 
-    //round priceWithTax to 2 decimal places and convert to a number before returning
+    //Round priceWithTax to 2 decimal places,
+    //and convert to a number before returning.
     return Number(priceWithTax.toFixed(2);
 });
 

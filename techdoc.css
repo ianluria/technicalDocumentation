@@ -45,12 +45,27 @@ font-size: 0.85rem;
 }
 
  .introductoryText{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
     height: 100%;
 } 
+
+.introductoryText > * {
+    max-width: 55vw;
+}
+
+#MDNArrayDefinition{
+    font-size: 2.0rem;
+    /* max-width: 55vw; */
+}
+
+#myArrayDefinition{
+    font-size: 1.5rem;
+    margin: 0vh 0vw 40vh 0vw;
+    width: 53vw;
+}
 
 .main-section > header {
     font-size: 1.4rem;

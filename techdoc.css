@@ -35,8 +35,8 @@ font-size: 0.85rem;
 
 #main-doc{
     /* order: 2; */
-    padding: 3vh 0vw 3vh 15vw;
-    max-width: 60vw;
+    padding: 3vh 0vw 3vh 2vw;
+    max-width: 50vw;
     font-size: 1.1rem;
     height: 100%;
 }
@@ -58,9 +58,12 @@ font-size: 0.85rem;
 }
 
 #MDNArrayDefinition{
-    font-size: 2.0rem;
-    /* max-width: 55vw; */
+    font-size: 1.8rem;
+}
 
+#arraySample{
+    font-size: 3rem;
+    text-align: center;
 }
 
 #myArrayDefinition{
@@ -124,7 +127,7 @@ max-width: 12vw;
     font-size: 1.4rem;
     white-space: nowrap;
     position: fixed;
-    left:20vw;
+    left:13vw;
     top: 0;
 }
 

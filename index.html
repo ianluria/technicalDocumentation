@@ -14,20 +14,22 @@
 <body>
     <!-- <div id="technicalDocumentationContainer"> -->
     <main id="main-doc">
+
         <div id="main-content-container"></div>
+
         <div id="intro-text" class="introductoryText">
-            <!-- <div id="introTextContainer"> -->
             <p id="MDNArrayDefinition">"The JavaScript Array object is a global object that is used in the construction
                 of
                 arrays;
                 which are high-level, list-like objects."<a href="#arrayInfoSource" class="footerLinkReference"><sup>1</sup></a></p>
+
+                <p id="arraySample">[&nbsp;&nbsp;]</p>
 
             <p id="myArrayDefinition">Arrays are useful for storing multiple elements of data in one place. The Array
                 object has many built-in methods which make manipulting them simple.</p>
 
             <footer id="arrayInfoSource"><sup>1</sup> For more detailed information, visit the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Mozilla
                     Developer Network's entry on <code>Array</code></a>.</footer>
-            <!-- </div> -->
         </div>
 
         <section class="main-section" id="array_map">
@@ -125,7 +127,8 @@ const costOfDrivingJanuary = januaryMileage.reduce(reducer, 0);
 
             <p class="mdn-reference">"The slice() method returns a shallow copy of a portion of an array into a new
                 array object selected from
-                begin to end (end not included). The original array will not be modified." <a href="#sliceInfoSource" class="footerLinkReference"><sup>1</sup></a></p>
+                begin to end (end not included). The original array will not be modified." <a href="#sliceInfoSource"
+                    class="footerLinkReference"><sup>1</sup></a></p>
 
             <p class="myComments">
                 <code>slice()</code> creates a new array from an exact portion of an old array. It takes two
@@ -275,7 +278,7 @@ const largeSales = sales123118.filter(sale=>{
     </main>
 
     <nav id="navbar">
-        
+
         <header><a href="#intro-text" class="nav-link">Array methods</a></header>
         <a href="#array_map" class="nav-link">map()</a>
         <a href="#array_reduce" class="nav-link">reduce()</a>

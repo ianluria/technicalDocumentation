@@ -20,7 +20,7 @@
             <p id="MDNArrayDefinition">"The JavaScript Array object is a global object that is used in the construction
                 of
                 arrays;
-                which are high-level, list-like objects."<a href="#arrayInfoSource"><sup>1</sup></a></p>
+                which are high-level, list-like objects."<a href="#arrayInfoSource" class="footerLinkReference"><sup>1</sup></a></p>
 
             <p id="myArrayDefinition">Arrays are useful for storing multiple elements of data in one place. The Array
                 object has many built-in methods which make manipulting them simple.</p>
@@ -36,7 +36,7 @@
             <p class="mdn-reference">"The <code>map()</code> method creates a new array with the results of calling a
                 provided
                 function on every element in
-                the calling array." <a href="#mapInfoSource"><sup>1</sup></a></p>
+                the calling array." <a href="#mapInfoSource" class="footerLinkReference"><sup>1</sup></a></p>
             <p><code>map()</code> creates a new array after running a function on each element of the original array.</p>
             <pre class="codeBlock"><code class="prettyprint">newArray = oldArray.map(element=>{
                 
@@ -72,7 +72,7 @@ const arrayWithTaxes = priceOnlyArray.map(price=>{
             <p class="mdn-reference">"The <code>reduce()</code> method executes a reducer function (that you provide)
                 on
                 each member of the array resulting
-                in a single output value."<a href="#reduceInfoSource"><sup>1</sup></a></p>
+                in a single output value." <a href="#reduceInfoSource" class="footerLinkReference"><sup>1</sup></a></p>
 
             <p class="myComments"><code>reduce()</code> takes an initial value, and the first element of the array,
                 preforms an operation
@@ -125,7 +125,7 @@ const costOfDrivingJanuary = januaryMileage.reduce(reducer, 0);
 
             <p class="mdn-reference">"The slice() method returns a shallow copy of a portion of an array into a new
                 array object selected from
-                begin to end (end not included). The original array will not be modified."<a href="#sliceInfoSource"><sup>1</sup></a></p>
+                begin to end (end not included). The original array will not be modified." <a href="#sliceInfoSource" class="footerLinkReference"><sup>1</sup></a></p>
 
             <p class="myComments">
                 <code>slice()</code> creates a new array from an exact portion of an old array. It takes two
@@ -181,7 +181,7 @@ const firstThree = studentsArray.slice(0,3);
 
             <p class="mdn-reference">"The splice() method changes the contents of an array by removing or replacing
                 existing elements and/or
-                adding new elements."<a href="#spliceInfoSource"><sup>1</sup></a></p>
+                adding new elements." <a href="#spliceInfoSource" class="footerLinkReference"><sup>1</sup></a></p>
 
             <p class="myComments"><code>splice()</code> takes parameters that acutally change the array it is called
                 upon. Useful for adding and removing elements from within an existing array. </p>
@@ -236,7 +236,7 @@ plantHeights.splice(2, 0, 10.1, 10.4);
             <p class="subsectionTitle"><span class="greyBackground">Definition</span></p>
             <p class="mdn-reference">"The filter() method creates a new array with all elements that pass the test
                 implemented by the provided
-                function."<a href="#filterInfoSource"><sup>1</sup></a></p>
+                function." <a href="#filterInfoSource" class="footerLinkReference"><sup>1</sup></a></p>
             <p class="myComments"><code>filter()</code> creates a new array by running a function once for each element
                 in the old array. The function must return <code>true</code> or <code>false</code>. If the function
                 returns <code>true</code> on an element, it will be included in the new array. </p>
@@ -275,6 +275,7 @@ const largeSales = sales123118.filter(sale=>{
     </main>
 
     <nav id="navbar">
+        
         <header><a href="#intro-text" class="nav-link">Array methods</a></header>
         <a href="#array_map" class="nav-link">map()</a>
         <a href="#array_reduce" class="nav-link">reduce()</a>

@@ -35,7 +35,7 @@ font-size: 0.85rem;
 
 #main-doc{
     /* order: 2; */
-    padding: 3vh 0vw 3vh 14vw;
+    padding: 3vh 0vw 3vh 15vw;
     max-width: 60vw;
     font-size: 1.1rem;
     height: 100%;
@@ -92,6 +92,11 @@ font-size: 1em;
     background: #f4f4f4;
     padding: 0.5vh 0.5vw;
 
+}
+
+.footerLinkReference{
+color: black;
+text-decoration: none;
 }
 
 .myComments{

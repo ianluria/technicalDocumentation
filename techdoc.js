@@ -32,7 +32,7 @@ const mainDoc = document.getElementById("main-doc");
 const sectionDisplayContainer = document.getElementById("main-content-container");
 
 [...mainDoc.children].forEach(section => {
-    if (section != sectionDisplayContainer) { 
+    if (section != sectionDisplayContainer) {
         section.classList.add("hide");
     }
 });
@@ -56,7 +56,7 @@ const displaySection = function (section) {
     displayContainer.appendChild(duplicatedSection);
 };
 
-displaySection(getSection("intro-text")); 
+displaySection(getSection("intro-text"));
 
 [...document.getElementsByClassName("nav-link")].forEach(link => {
     link.addEventListener("click", (event) => {
@@ -70,3 +70,18 @@ displaySection(getSection("intro-text"));
 });
 
 
+const breakText = function (event) {
+    console.log(event);
+
+    const navBar = document.getElementById("navbar");
+
+    if (navBar.firstElementChild.tagName === "HEADER") {
+        
+        const navHeader = navBar.firstElementChild;
+        console.log("header", navHeader);
+
+    }
+    // debugger;
+}
+
+window.onresize = breakText(event);

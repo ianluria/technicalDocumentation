@@ -71,17 +71,20 @@ displaySection(getSection("intro-text"));
 
 
 const breakText = function (event) {
-    console.log(event);
+    //console.log(event);
 
     const navBar = document.getElementById("navbar");
+    const navBarHeader = document.getElementById("navBarHeader");
 
-    if (navBar.firstElementChild.tagName === "HEADER") {
-        
-        const navHeader = navBar.firstElementChild;
-        console.log("header", navHeader);
+    const navBarWidth = navBar.offsetWidth;
+    const headerWidth = navBarHeader.offsetWidth;
 
-    }
-    // debugger;
+   //console.log("bar: ", navBarWidth, " header: ", headerWidth);
+
+   if (navBarWidth < headerWidth + 2){
+      navBarHeader.firstElementChild.innerHTML = navBarHeader.firstElementChild.innerHTML.replace(/\s/, "<br>");
+      //console.log(navBarHeader.firstChild.innerHTML);
+   }
 }
 
-window.onresize = breakText(event);
+window.onresize = breakText;

@@ -69,7 +69,7 @@ displaySection(getSection("intro-text"));
     });
 });
 
-
+/*
 const breakText = function (event) {
     //console.log(window.innerWidth);
 
@@ -84,7 +84,7 @@ const breakText = function (event) {
         //console.log("bar: ", navBarWidth, " header: ", headerWidth);
         // debugger;
 
-        if (navBarWidth < headerWidth + 2) {
+        if (navBarWidth < headerWidth + 10) {
             headerLinkInnerHTML = headerLinkInnerHTML.replace(/\s/, "<br>");
             //console.log(navBarHeader.firstChild.innerHTML);
             //console.log(headerLinkInnerHTML);
@@ -98,3 +98,4 @@ const breakText = function (event) {
 }
 
 window.onresize = breakText;
+*/

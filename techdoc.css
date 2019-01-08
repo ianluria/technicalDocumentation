@@ -127,7 +127,7 @@ text-decoration: none;
     max-width: 10vw; */
 max-width: 12vw;
     font-size: 1.4rem;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     position: fixed;
     left:13vw;
     top: 0;

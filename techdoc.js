@@ -71,20 +71,30 @@ displaySection(getSection("intro-text"));
 
 
 const breakText = function (event) {
-    //console.log(event);
+    //console.log(window.innerWidth);
 
-    const navBar = document.getElementById("navbar");
-    const navBarHeader = document.getElementById("navBarHeader");
+    if (window.innerWidth < 1200 && window.innerWidth > 900) {
+        const navBar = document.getElementById("navbar");
+        const navBarHeader = document.getElementById("navBarHeader");
 
-    const navBarWidth = navBar.offsetWidth;
-    const headerWidth = navBarHeader.offsetWidth;
+        const navBarWidth = navBar.offsetWidth;
+        const headerWidth = navBarHeader.offsetWidth;
 
-   //console.log("bar: ", navBarWidth, " header: ", headerWidth);
+        let headerLinkInnerHTML = navBarHeader.firstElementChild.innerHTML;
+        //console.log("bar: ", navBarWidth, " header: ", headerWidth);
+        // debugger;
 
-   if (navBarWidth < headerWidth + 2){
-      navBarHeader.firstElementChild.innerHTML = navBarHeader.firstElementChild.innerHTML.replace(/\s/, "<br>");
-      //console.log(navBarHeader.firstChild.innerHTML);
-   }
+        if (navBarWidth < headerWidth + 2) {
+            headerLinkInnerHTML = headerLinkInnerHTML.replace(/\s/, "<br>");
+            //console.log(navBarHeader.firstChild.innerHTML);
+            //console.log(headerLinkInnerHTML);
+        } else {
+            headerLinkInnerHTML = headerLinkInnerHTML.replace(/<br>/, " ");
+            //console.log("false");
+        }
+
+        navBarHeader.firstElementChild.innerHTML = headerLinkInnerHTML;
+    }
 }
 
 window.onresize = breakText;

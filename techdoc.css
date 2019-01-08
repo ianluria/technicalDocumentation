@@ -26,10 +26,12 @@ top: 0; */
 
 .codeBlock{
     margin: 0vh 0vw 0vh 2.5vw;
+   
 }
 
 .codeBlock code{
 font-size: 0.85rem;
+white-space: pre-wrap;
 }
 
 
@@ -84,10 +86,6 @@ font-size: 0.85rem;
     font-weight: bold;
     font-family: Arial, sans-serif;
 }
-
-/* .mdn-reference>code{
-font-size: 1em;
-} */
 
 .subsectionTitle{
         font-size: 1.10rem;

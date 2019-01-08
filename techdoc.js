@@ -96,6 +96,5 @@ const breakText = function (event) {
         navBarHeader.firstElementChild.innerHTML = headerLinkInnerHTML;
     }
 }
-
 window.onresize = breakText;
 */

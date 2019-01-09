@@ -61,9 +61,10 @@ displaySection(getSection("intro-text"));
 [...document.getElementsByClassName("nav-link")].forEach(link => {
     link.addEventListener("click", (event) => {
         event.preventDefault();
-
+        //debugger;
         const sectionID = event.target.hash.match(/[^\#]/g).join('');
         // console.log(sectionID);
+        
 
         displaySection(getSection(sectionID));
     });

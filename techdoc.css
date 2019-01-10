@@ -7,12 +7,11 @@ font-size: 1em;
 }
 
 body{
-    /* box-sizing: border-box; */
     font-family: 'Yrsa', serif;
     display: flex;
     justify-content: center;
     /* padding: 0vh 0vw 0vh 38vw; */
-    /* height: 97vh; */
+    height: 97vh;
 }
 
 /* #technicalDocumentationContainer{
@@ -22,7 +21,7 @@ justify-content: center;
 min-height: 97vh;
 /* position: relative;
 top: 0; */
-} */
+
 
 .codeBlock{
     margin: 0vh 0vw 0vh 2.5vw;
@@ -37,7 +36,7 @@ white-space: pre-wrap;
 
 #main-doc{
     /* order: 2; */
-    padding: 3vh 0vw 3vh 2vw;
+    padding: 3vh 0vw 3vh 3vw;
     max-width: 50vw;
     font-size: 1.1rem;
     height: 100%;
@@ -47,19 +46,33 @@ white-space: pre-wrap;
     height: 100%;
 }
 
- .introductoryText{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-     align-items: center; */
+.main-section{
+    position: relative;
+}
+
+#duplicate{
     /* height: 100%; */
+    /* position: relative; */
+}
 
-    /* max-height: 90vh; */
-} 
+.introductoryText{
+position: relative;
+height: 100%;
+}
 
-/* .introductoryText > * {
-    max-width: 55vw;
-} */
+#arrayInfoSource{
+    position: absolute;
+    bottom: 2vh;
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    border-top: 1px black solid;
+    padding: 1vh 0vw 0vh 0vw;
+}
+
+#arrayInfoSource code{
+    font-size: 1.1rem;
+}
 
 #MDNArrayDefinition{
     font-size: 1.8rem;
@@ -77,14 +90,18 @@ white-space: pre-wrap;
 }
 
 .main-section > header {
-    font-size: 1.4rem;
-    margin-bottom: 5vh;
+    font-size: 2rem;
+    margin-bottom: 2vh;
 }
 
 .mdn-reference{
     font-size: 1.1rem;
     font-weight: bold;
     font-family: Arial, sans-serif;
+}
+
+.mdn-reference>code{
+    font-size: 1.4rem;
 }
 
 .subsectionTitle{
@@ -106,12 +123,20 @@ text-decoration: none;
     padding: 0vh 0vw 0vh 1.25vw;
 }
 
-.main-section>footer{
-    margin: 10vh 0vw 0vh 0vw;
-    padding: 1vh 0vw;
+.main-section-footer{
+    /* margin: 10vh 0vw 0vh 0vw; */
+    padding: 1.25vh .33vw;
     border-top: 1px black solid;
     font-size: 0.9rem;
+    position: absolute;
+    bottom: -10vh;
+    width: 100%;
 }
+
+.main-section-footer code{
+    font-size: 1.1rem;
+}
+
 
 #navbar{
     /* order: 1; */
@@ -123,7 +148,7 @@ text-decoration: none;
     height: 100%;
     /* min-width: 10vw;
     max-width: 10vw; */
-max-width: 12vw;
+max-width: 13vw;
     font-size: 1.4rem;
     /* white-space: nowrap; */
     position: fixed;
@@ -176,15 +201,12 @@ color: black;
         flex-direction: row;
         /* align-items: flex-end; */
         justify-content: space-evenly;
+        align-items: baseline;
         padding: 1vh 1.0vw;
         height: 5vh;
         min-width: 100vw;
-        /* min-width: 10vw;
-        max-width: 10vw; */
-    /* max-width: 12vw; */
         font-size: 1.0rem;
         position: fixed;
-        /* left:0vw; */
         top: 0vh;
         left: 0vw;
         order: 1;

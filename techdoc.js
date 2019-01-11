@@ -5,19 +5,6 @@ const getSection = function (sectionID) {
     return [...mainDoc.children].find(section => section.id === sectionID);
 }
 
-//first, hide all sections except for the intro text
-
-const mainDoc = document.getElementById("main-doc");
-
-const sectionDisplayContainer = document.getElementById("main-content-container");
-
-//consider adding hide class directly on each section first then removing as needed???
-[...mainDoc.children].forEach(section => {
-    if (section != sectionDisplayContainer) {
-        section.classList.add("hide");
-    }
-});
-
 const displaySection = function (section) {
 
     const displayContainer = document.getElementById("main-content-container");
@@ -35,13 +22,15 @@ const displaySection = function (section) {
     displayContainer.appendChild(duplicatedSection);
 };
 
+//Display introductory text when page launches
 displaySection(getSection("intro-text"));
 
+//Click functionality for navBar links
 [...document.getElementsByClassName("nav-link")].forEach(link => {
     link.addEventListener("click", (event) => {
         event.preventDefault();
-        const sectionID = event.target.hash.match(/[^\#]/g).join('');
-
+       const sectionID = event.target.hash.match(/[^\#]/g).join('');
+   
         displaySection(getSection(sectionID));
     });
 });

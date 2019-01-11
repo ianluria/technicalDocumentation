@@ -1,4 +1,4 @@
-# technicalDocumentation
+# Array Methods Technical Documentation Page
 
 Created to fullfil freeCodeCamp's responsive web design portfolio certificate.  
 

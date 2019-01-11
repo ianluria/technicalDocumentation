@@ -31,6 +31,7 @@ const mainDoc = document.getElementById("main-doc");
 
 const sectionDisplayContainer = document.getElementById("main-content-container");
 
+//consider adding hide class directly on each section first then removing as needed???
 [...mainDoc.children].forEach(section => {
     if (section != sectionDisplayContainer) {
         section.classList.add("hide");
@@ -40,7 +41,7 @@ const sectionDisplayContainer = document.getElementById("main-content-container"
 //sectionDisplayContainer.appendChild(getSection("intro-text"));
 
 const displaySection = function (section) {
-    //console.log(section);
+
     const displayContainer = document.getElementById("main-content-container");
 
     if (displayContainer.hasChildNodes) {
@@ -51,7 +52,8 @@ const displaySection = function (section) {
 
     const duplicatedSection = section.cloneNode(true);
     duplicatedSection.classList.remove("hide");
-    duplicatedSection.id = "duplicate";
+    // duplicatedSection.id = "duplicate";
+    duplicatedSection.classList.add("duplicate");
 
     displayContainer.appendChild(duplicatedSection);
 };
@@ -64,7 +66,7 @@ displaySection(getSection("intro-text"));
         //debugger;
         const sectionID = event.target.hash.match(/[^\#]/g).join('');
         // console.log(sectionID);
-        
+
 
         displaySection(getSection(sectionID));
     });

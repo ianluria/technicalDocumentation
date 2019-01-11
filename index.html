@@ -26,7 +26,7 @@
                 which are high-level, list-like objects."&nbsp;<a href="#arrayInfoSource" class="footerLinkReference"><sup>1</sup></a></p>
 
             <p id="myArrayDefinition">Arrays are useful for storing multiple elements of data in one place. The Array
-                object has many built-in methods which make manipulting them simple.</p>
+                object has many built-in methods which make manipulating them simple.</p>
 
             <footer id="arrayInfoSource"><sup>1</sup> For more detailed information, visit the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Mozilla
                     Developer Network's entry on <code>Array</code></a>.</footer>
@@ -55,12 +55,16 @@
             <pre class="codeBlock"><code class="prettyprint">const priceOnlyArray = [1.25, 2.00, 5.89, 12.30];
                 
 const arrayWithTaxes = priceOnlyArray.map(price=>{
+
     //tax is 4.25%   
+
     const taxPercent = 0.0425;
     const priceWithTax = price + (price * taxPercent); 
+
     //Round priceWithTax to 2 decimal places,
     //and convert to a number before returning.
-    return Number(priceWithTax.toFixed(2);
+
+    return Number(priceWithTax.toFixed(2));
 });
 
 //arrayWithTaxes = [1.3, 2.08, 6.14, 12.82]</code></pre>
@@ -78,13 +82,13 @@ const arrayWithTaxes = priceOnlyArray.map(price=>{
                 each member of the array resulting
                 in a single output value." <a href="#reduceInfoSource" class="footerLinkReference"><sup>1</sup></a></p>
 
-            <p class="myComments"><code>reduce()</code> takes an initial value, and the first element of the array,
+            <p class="myComments"><code>reduce()</code> takes an initial value and the first element of the array,
                 preforms an operation
-                between the two, and returns the result as an accumulator value. Each element of the array is used to
-                adjust the accumulator according to your code. Once every element has had its chance, the final
-                accumulator value is returned to be used as a single value.</p>
+                between the two, and returns the result as an <code>accumulator</code> value. Each element of the array is used to
+                adjust the <code>accumulator</code> according to your code. Once every element has had its chance, the final
+                <code>accumulator</code> value is returned as a single value.</p>
 
-            <pre class="codeBlock"><code class="prettyprint">const reducedArrayOutput = array.reduce(accumulator, arrayElement=>{
+            <pre class="codeBlock"><code class="prettyprint">const reducedArrayOutput = array.reduce((accumulator, arrayElement)=>{
 
     //code that takes each arrayElement and the accumulator,
     //preforms an operation between the two, and returns the result
@@ -100,11 +104,11 @@ const arrayWithTaxes = priceOnlyArray.map(price=>{
 }, initialValue); </code></pre>
 
             <p class="subsectionTitle"><span class="greyBackground">Code Example</span></p>
-            <p class="myComments"><code>januaryMileage</code> is an array of miles driven in a day. <code>reduce()</code>
-                will be run on each day in <code>januaryMileage</code>, multiply it by the average cost per mile, and
+            <p class="myComments"><code>januaryMileage</code> is an array of miles driven per day. <code>reduce()</code>
+                will be run on each day in <code>januaryMileage</code>. The miles driven in that day will be multiplied by the average cost per mile, and
                 then
-                add it to the accumulator. <code>costOfDrivingJanuary</code> will equal the total miles in the array
-                multipled by cost per mile.</p>
+                added to the accumulator. <code>costOfDrivingJanuary</code> will equal the total miles in the array
+                multipled by the cost per mile.</p>
             <pre class="codeBlock"><code class="prettyprint">const januaryMileage = [102, 55, 86, 275, 10, 92];
 
 const reducer = function(accumulator, milesInADay){
@@ -136,7 +140,7 @@ const costOfDrivingJanuary = januaryMileage.reduce(reducer, 0);
 
             <p class="myComments">
                 <code>slice()</code> creates a new array from an exact portion of an old array. It takes two
-                parameters, the first is index to begin extraction, and the second is to end extraction. If the second
+                parameters, the first is the index to begin extraction, and the second is to end extraction. If the second
                 index is left out, it will give everything to the end. Remember that arrays begin at the zero index.
             </p>
             <ul>

@@ -55,6 +55,7 @@ body{
         font-size: 1rem;
         border-top: 1px black solid;
         padding: 1vh 0vw 0vh 0vw;
+        width: 100%;
     }
     
     #arrayInfoSource code{

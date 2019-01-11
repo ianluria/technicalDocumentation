@@ -13,26 +13,6 @@ body{
     height: 97vh;
 }
 
-/* #technicalDocumentationContainer{
-display: flex;
-align-items: center;
-justify-content: center;
-min-height: 97vh;
-/* position: relative;
-top: 0; */
-
-
-.codeBlock{
-    margin: 0vh 0vw 0vh 2.5vw;
-   
-}
-
-.codeBlock code{
-font-size: 0.85rem;
-white-space: pre-wrap;
-}
-
-
 #main-doc{
     /* order: 2; */
     padding: 3vh 0vw 3vh 3vw;
@@ -41,56 +21,69 @@ white-space: pre-wrap;
     height: 100%;
 }
 
+
 #main-content-container{
     height: 100%;
 }
 
-.main-section{
-    position: relative;
-}
-
-#duplicate{
-    /* height: 100%; */
-    /* position: relative; */
-}
+.hide {
+    display: none;
+ }
 
 .introductoryText{
-position: relative;
-height: 100%;
+    position: relative;
+    height: 100%;
+    
+    }
 
+    #arraySample{
+        font-size: 3rem;
+        text-align: center;
+        margin: 1vh 0vw;
+    }
+
+    #MDNArrayDefinition{
+        font-size: 1.8rem;
+    }
+    
+    
+    #myArrayDefinition{
+        font-size: 1.5rem;    
+    }
+
+    #arrayInfoSource{
+        position: absolute;
+        bottom: 2vh;
+        text-align: center;
+        font-size: 1rem;
+        width: 100%;
+        border-top: 1px black solid;
+        padding: 1vh 0vw 0vh 0vw;
+    }
+    
+    #arrayInfoSource code{
+        font-size: 1.1rem;
+    }
+
+
+    .main-section{
+        position: relative;
+    }
+
+    .main-section > header {
+        font-size: 2rem;
+        margin-bottom: 2vh;
+    }
+
+
+    .subsectionTitle{
+        font-size: 1.10rem;
 }
 
-#arrayInfoSource{
-    position: absolute;
-    bottom: 2vh;
-    text-align: center;
-    font-size: 1rem;
-    width: 100%;
-    border-top: 1px black solid;
-    padding: 1vh 0vw 0vh 0vw;
-}
+.greyBackground{
+    background: #f4f4f4;
+    padding: 0.5vh 0.5vw;
 
-#arrayInfoSource code{
-    font-size: 1.1rem;
-}
-
-#MDNArrayDefinition{
-    font-size: 1.8rem;
-}
-
-#arraySample{
-    font-size: 3rem;
-    text-align: center;
-    margin: 1vh 0vw;
-}
-
-#myArrayDefinition{
-    font-size: 1.5rem;    
-}
-
-.main-section > header {
-    font-size: 2rem;
-    margin-bottom: 2vh;
 }
 
 .mdn-reference{
@@ -103,38 +96,40 @@ height: 100%;
     font-size: 1.4rem;
 }
 
-.subsectionTitle{
-        font-size: 1.10rem;
-}
-
-.greyBackground{
-    background: #f4f4f4;
-    padding: 0.5vh 0.5vw;
-
-}
 
 .footerLinkReference{
-color: black;
-text-decoration: none;
-}
+    color: black;
+    text-decoration: none;
+    }
 
-.myComments{
-    padding: 0vh 0vw 0vh 1.25vw;
-}
 
-.main-section-footer{
-    /* margin: 10vh 0vw 0vh 0vw; */
-    padding: 1.25vh .33vw;
-    border-top: 1px black solid;
-    font-size: 0.9rem;
-    position: absolute;
-    bottom: -10vh;
-    width: 100%;
-}
-
-.main-section-footer code{
-    font-size: 1.1rem;
-}
+    .codeBlock{
+        margin: 0vh 0vw 0vh 2.5vw;
+       
+    }
+    
+    .codeBlock code{
+    font-size: 0.85rem;
+    white-space: pre-wrap;
+    }
+    
+    .myComments{
+        padding: 0vh 0vw 0vh 1.25vw;
+    }
+    
+    .main-section-footer{
+        /* margin: 10vh 0vw 0vh 0vw; */
+        padding: 1.25vh .33vw;
+        border-top: 1px black solid;
+        font-size: 0.9rem;
+        position: absolute;
+        bottom: -10vh;
+        width: 100%;
+    }
+    
+    .main-section-footer code{
+        font-size: 1.1rem;
+    }
 
 
 #navbar{
@@ -174,12 +169,9 @@ color: black;
     text-decoration: underline;
 }
 
-.hide {
-    /* position: absolute !important;
-    top: -9999px !important;
-    left: -9999px !important; */
-    display: none;
- }
+
+
+
 
  @media screen and (max-width: 765px){
 
@@ -211,6 +203,16 @@ color: black;
         order: 1;
     }
 
+    #navBarHeader {
+        display: none;
+    }
+
+    
+    #mobileOnlyHeader{
+        display: inline;
+    }
+
+
     .nav-link{
         margin: 0vh 2vw;
         text-decoration: none;
@@ -221,13 +223,6 @@ color: black;
         text-decoration: none;
     }
 
-     #navBarHeader {
-        display: none;
-    }
-
-    #mobileOnlyHeader{
-        display: inline;
-    }
 
     #main-doc{
         order: 2;
@@ -244,6 +239,19 @@ color: black;
         flex-direction: column;
         justify-content: center;
     }
+
+    #MDNArrayDefinition, #myArrayDefinition {
+        text-align: center;
+        text-align: justify;
+    }
+
+     #MDNArrayDefinition{
+         font-size: 1.5rem; 
+    }
+    
+    #myArrayDefinition{
+         font-size: 1.2rem;    
+    } 
 
     #arrayInfoSource {
         bottom: 3vh;
@@ -263,16 +271,5 @@ color: black;
     }
 
 
-    #MDNArrayDefinition, #myArrayDefinition {
-        text-align: center;
-        text-align: justify;
-    }
-
-     #MDNArrayDefinition{
-         font-size: 1.5rem; 
-    }
-    
-    #myArrayDefinition{
-         font-size: 1.2rem;    
-    } 
+   
  }
